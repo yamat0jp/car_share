@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{34C0C53E-778C-4A67-9BF4-E051594BD51F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="car_share.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="share_app.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="car_share">
+        <MSBuild Projects="car_share.dproj"/>
+    </Target>
+    <Target Name="car_share:Clean">
+        <MSBuild Projects="car_share.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="car_share:Make">
+        <MSBuild Projects="car_share.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="share_app">
+        <MSBuild Projects="share_app.dproj"/>
+    </Target>
+    <Target Name="share_app:Clean">
+        <MSBuild Projects="share_app.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="share_app:Make">
+        <MSBuild Projects="share_app.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="car_share;share_app"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="car_share:Clean;share_app:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="car_share:Make;share_app:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

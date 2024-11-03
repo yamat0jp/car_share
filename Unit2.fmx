@@ -1,0 +1,39 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 264.000000000000000000
+    Position.Y = 296.000000000000000000
+  end
+  object Button1: TButton
+    Position.X = 272.000000000000000000
+    Position.Y = 338.000000000000000000
+    TabOrder = 2
+    Text = 'Button1'
+    TextSettings.Trimming = None
+  end
+  object StringGrid1: TStringGrid
+    Align = Top
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 241.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 216.000000000000000000
+  end
+  object DSProviderConnection1: TDSProviderConnection
+    Left = 288
+    Top = 408
+  end
+end
