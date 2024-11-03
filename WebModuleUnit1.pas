@@ -120,7 +120,8 @@ begin
     FDTable1.First;
     number := FDTable2.Lookup('car id', id, 'car number');
     DataSetTableProducer1.Header.Text :=
-      Format('<p>Ô—¼ƒiƒ“ƒo[y%sz</p><form action="/post" method=post>', [number]);
+      Format('<p style=text-align:center>Ô—¼ƒiƒ“ƒo[y%sz</p><form action="/post" method=post>',
+      [number]);
     Response.ContentType := 'text/html;charset=utf-8';
     Response.Content := DataSetTableProducer1.Content;
   end
@@ -143,7 +144,7 @@ begin
     finally
       list.Free;
     end;
-    Response.SendRedirect('/');// Handled:=false don't fit
+    Response.SendRedirect('/'); // Handled:=false don't fit
   end
   else
   begin

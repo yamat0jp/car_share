@@ -22,12 +22,11 @@ object WebModule1: TWebModule1
   Width = 415
   object FDConnection1: TFDConnection
     Params.Strings = (
-      
-        'Database=C:\Users\yamat\Documents\Embarcadero\Studio\Projects\ca' +
-        'r_share\SHARE.IB'
+      'Database=C:\Users\yamat\Documents\GitHub\2024\car_share\SHARE.IB'
       'User_Name=sysdba'
       'Password=masterkey'
       'OpenMode=OpenOrCreate'
+      'CharacterSet=UTF8'
       'DriverID=IB')
     Connected = True
     LoginPrompt = False
